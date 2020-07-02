@@ -1,0 +1,23 @@
+###########################################
+# Syntax Coloring Map For Serial Command Library
+###########################################
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+serialCommand	KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+begin		KEYWORD2
+getCommand		KEYWORD2
+getValue		KEYWORD2
+equal			KEYWORD2
+
+###########################################
+# Constants (LITERAL1)
+###########################################
+
+sizeInstr		LITERAL1
