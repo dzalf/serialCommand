@@ -2,7 +2,7 @@
 A library for sending coded commands to the MCU via the serial port to be interpreted and executed
 
 
-**# TODO **
+**# TODO**
 
 Give a detailed description of the use and importance of this library. 
 
