@@ -1,11 +1,13 @@
 
 /*
-  Advance Example: Controlling the activation of a 8x1 MUX using serial commands lib
+  Advanced Example: Controlling the activation of a 8x1 MUX using serial commands lib
 
   The library: https://github.com/dzalf/CD4051-MAX4617_Analog_Multiplexer_Library is required
 
 
 */
+
+
 #include <Arduino.h>
 #include <U8g2lib.h>
 
