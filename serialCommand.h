@@ -26,20 +26,21 @@
 #ifndef serialCommand_h
 #define serialCommand_h
 
-#include <Arduino.h>
+#include "Arduino.h"
 #include <string.h>
 
 class serialCommand{
   
   public:
 
-  byte instrLength;
+  uint8_t instrLength;
   
   serialCommand(bool debug = false);
+  serialCommand(int, bool debug = false);
   serialCommand(void);
   serialCommand(int);
 
-  void begin(void); //char []
+  void begin(char *); 
   int getValue(char []);
   bool equal(char[], char[]);
   char * getCommand(char[]);
@@ -48,6 +49,7 @@ class serialCommand{
 
   byte _instrLength = instrLength;
   char *_pch;
+  char *_divChar;
   bool _debug = false;
   char * _instrBuffer = (char *) malloc(_instrLength); // char pointer --> allocate memory for the size of the instruction
   

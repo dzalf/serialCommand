@@ -16,22 +16,36 @@
     Why this library is relevant? I coded this as I needed to implement a FSM on an Arduino board for 
     controlling a PID temperature controller.
 
-    
     Author: dzalf - Daniel Melendrez
     Date: June 2020 (COVID-19 Vibes)
 
     Version: 0.1.1  - Initial deployment
              0.1.9  - General cleanup. Corrected some typos and reviewed methods implementation
+             ...    - After a long hiatus (mainly due to COVID and life stuff), touching this code, again
+    (Sept-21) 1.0.1 - Changes in data types
+                      Custom char separator
+                      Custom instruction size
+
+    #TODO: Make library more memory efficient
+           Make the library safer to use (memory-wise, instruction size, etc) 
+           Add a whole lot of comments!                  
+
 */
 
 
 #include "serialCommand.h"
 
-
-// Constructor
+// Constructors
 
 serialCommand::serialCommand(bool debug) {
 
+  _debug = debug;
+
+}
+
+serialCommand::serialCommand(int sizeInstr, bool debug) {
+
+   _instrLength = sizeInstr;
   _debug = debug;
 
 }
@@ -50,9 +64,11 @@ serialCommand::serialCommand(int sizeInstr) {
 
 // Methods
 
-void serialCommand::begin() { 
+void serialCommand::begin(char *x) {
 
-// Nothing yet
+  _divChar = x;
+
+  if (_debug) Serial.println(_divChar);
 
 }
 
