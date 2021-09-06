@@ -9,6 +9,8 @@
     XXXX -> value sent to the serial. It can be omitted if the instruction does not
             involve handling a value them.
 
+            and the seize of there instruction/value pairs can be defined by the user
+
     This library helps when implementing a Finite States Machine and the MCU is controlled through
     the serial port via a PC. 
 

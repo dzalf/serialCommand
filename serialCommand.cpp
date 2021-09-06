@@ -32,11 +32,13 @@
 
 */
 
-
 #include "serialCommand.h"
 
 // Constructors
 
+/* @brief: Contructor that accepts debugging flag
+* @param debug: enables or disables code debugging via serial console
+*/
 serialCommand::serialCommand(bool debug) {
 
   _debug = debug;
